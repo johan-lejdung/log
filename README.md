@@ -16,7 +16,7 @@ import (
 	"flag"
 
 	log "github.com/sirupsen/logrus"
-	joonix "github.com/joonix/log"
+	jlog /github.com/johan-lejdung/log
 )
 
 func main() {
@@ -29,8 +29,10 @@ func main() {
 		os.Exit(1)
 	}
 	log.SetLevel(level)
-	log.SetFormatter(&joonix.FluentdFormatter{})
+	log.SetFormatter(&jlog.FluentdFormatter{})
 
 	log.Debug("hello world!")		
 }
 ```
+
+Originally forked from https://github.com/joonix/log
